@@ -1,44 +1,44 @@
 import "./App.css";
 import Profile from "./Profile";
 import Product from "./Product";
-const items = [
+const ListItems = [
   {
     href: "https://training.zuri.team/",
     id: "btn_zuri",
-    content: "Zuri Team",
+    book: "Zuri Team",
     desc: "",
   },
   {
     href: "https://books.zuri.team/",
     id: "books",
-    content: "Zuri books",
-    desc: "Looking from books about coding and design?- Visit Zuri Books.",
+    book: "Zuri books",
+    desc: "Get the best book about programming and design?- Visit Zuri Books.",
   },
   {
-    href: "https://books.zuri.team/python-for-beginners?ref_id=Ayomide-Ajala",
+    href: "https://books.zuri.team/python-for-beginners?ref_id=pleasantvik",
     id: "book_python",
-    content: "Python Books",
+    book: "Python Books",
   },
   {
     href: "https://background.zuri.team",
     id: "pitch",
-    content: "Run a quick background check to know who you are working with.",
+    book: "Want to know who your employee are? Run a quick background check at low cost.",
   },
   {
     href: "https://books.zuri.team/design-rules",
     id: "book_design",
-    content: "Design Books",
+    book: "Design Books",
   },
 ];
-function App() {
+const App = () => {
   return (
     <div className="container">
       <Profile />
-      {items.map(({ href, id, content, desc }) => {
-        return <Product href={href} id={id} content={content} desc={desc} />;
+      {ListItems.map(({ href, id, book, desc }) => {
+        return <Product href={href} id={id} book={book} desc={desc} />;
       })}
     </div>
   );
-}
+};
 
 export default App;

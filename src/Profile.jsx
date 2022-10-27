@@ -8,9 +8,9 @@ export default function Profile() {
         <img src={User} alt="" className="image" id="profile_img" />
       </div>
       <div className="username">
-        <span id="twitter">Anita_...</span>
+        <span id="twitter">@pleasantvik</span>
         <span id="slack" className="hidden">
-          Ayomide Ajala
+          pleasantvik
         </span>
       </div>
     </section>

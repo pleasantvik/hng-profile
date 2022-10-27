@@ -63,3 +63,9 @@ a:active {
   font-size: 0.9rem;
   color: #777;
 }
+
+@media (max-width: 31.25em) {
+  .subtext {
+    display: none;
+  }
+}
