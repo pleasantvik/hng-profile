@@ -4,7 +4,7 @@ import Product from "./Product";
 const ListItems = [
   {
     href: "https://training.zuri.team/",
-    id: "btn_zuri",
+    id: "btn__zuri",
     book: "Zuri Team",
     desc: "",
   },
@@ -16,7 +16,7 @@ const ListItems = [
   },
   {
     href: "https://books.zuri.team/python-for-beginners?ref_id=pleasantvik",
-    id: "book_python",
+    id: "book__python",
     book: "Python Books",
   },
   {
@@ -26,7 +26,7 @@ const ListItems = [
   },
   {
     href: "https://books.zuri.team/design-rules",
-    id: "book_design",
+    id: "book__design",
     book: "Design Books",
   },
 ];

@@ -5,7 +5,7 @@ export default function Profile() {
   return (
     <section className="profile">
       <div className="profile-img">
-        <img src={User} alt="" className="image" id="profile_img" />
+        <img src={User} alt="" className="image" id="profile__img" />
       </div>
       <div className="username">
         <span id="twitter">@pleasantvik</span>
