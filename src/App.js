@@ -1,6 +1,10 @@
 import "./App.css";
 import Profile from "./Profile";
 import Product from "./Product";
+import { Redirect, Route, Switch } from "react-router-dom";
+import Contact from "./Contact";
+import Home from "./Home";
+import Form from "./Form";
 const ListItems = [
   {
     href: "https://training.zuri.team/",
@@ -25,7 +29,7 @@ const ListItems = [
     book: "Want to know who your employee are? Run a quick background check at low cost.",
   },
   {
-    href: "https://books.zuri.team/design-rules",
+    href: "books.zuri.team/design-rules",
     id: "book__design",
     book: "Design Books",
   },
@@ -33,10 +37,21 @@ const ListItems = [
 const App = () => {
   return (
     <div className="container">
-      <Profile />
-      {ListItems.map(({ href, id, book, desc }) => {
-        return <Product href={href} id={id} book={book} desc={desc} />;
-      })}
+      <Switch>
+        <Route exact path="/">
+          <Profile />
+
+          {ListItems.map(({ href, id, book, desc }) => {
+            return (
+              <Product key={id} href={href} id={id} book={book} desc={desc} />
+            );
+          })}
+          <Contact />
+        </Route>
+        <Route path="/contact">
+          <Form />
+        </Route>
+      </Switch>
     </div>
   );
 };
