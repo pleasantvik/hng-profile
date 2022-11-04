@@ -276,7 +276,7 @@ function Form(props) {
             // checked={check}
           />
           <label className="terms-label" for="terms">
-            You agree to providing your data to Ayomidea1 who may contact you.
+            You agree to providing your data to pleasantvik who may contact you.
           </label>
 
           {/* {!check && <p>Agree</p>} */}
