@@ -239,7 +239,7 @@ function Form(props) {
         </div>
 
         <div className="form-group">
-          <label className="form-label" for="message">
+          <label className="form-label" htmlFor="message">
             Message
           </label>
           <div className={messageInputClasses}>
@@ -254,11 +254,7 @@ function Form(props) {
               value={message}
               onBlur={messageInputBlurHandler}
             ></textarea>
-            <img
-              src="images/icon-error.svg"
-              className="error-icon"
-              alt="error-img"
-            />
+
             {messageInputIsInvalid && (
               <p className="form-input error error-text">
                 Please enter a message
@@ -275,7 +271,7 @@ function Form(props) {
             // onChange={handleCheck}
             // checked={check}
           />
-          <label className="terms-label" for="terms">
+          <label className="terms-label" htmlFor="terms">
             You agree to providing your data to pleasantvik who may contact you.
           </label>
 
