@@ -10,7 +10,6 @@ function Form(props) {
   const [enteredLastName, setEnteredLastName] = useState("");
   const [enteredLastNameIsValid, setEnteredLastNameIsValid] = useState(false);
   const [enteredLastNameTouched, setEnteredLastNameTouched] = useState(false);
-  const [submitForm, setSubmitForm] = useState(false);
 
   // EMAIL VALIDATION
   const [email, setEmail] = useState("");
@@ -21,21 +20,6 @@ function Form(props) {
   const [message, setMessage] = useState("");
   const [messageIsValid, setMessageIsValid] = useState(false);
   const [messageIsTouched, setMessageIsTouched] = useState(false);
-  //   const [check, setCheck] = useState(true);
-  let formIsValid = false;
-
-  if (
-    enteredFirstNameIsValid &&
-    enteredLastNameIsValid &&
-    emailIsValid &&
-    messageIsValid
-  ) {
-    formIsValid = true;
-  }
-  //   const handleCheck = () => {
-  //     setCheck((prev) => !prev);
-  //     console.log(check);
-  //   };
 
   //NAME INPUT HANDLER
   const handleFirstNameInputChange = (e) => {
@@ -101,11 +85,6 @@ function Form(props) {
     e.preventDefault();
 
     setEnteredFirstNameTouched(true);
-    setEnteredLastNameTouched(true);
-    setEmailIsTouched(true);
-    setMessageIsTouched(true);
-
-    // if (!check) return;
 
     //WITH useRef
     // const enteredValue = nameInputRef.current.value;
@@ -125,11 +104,10 @@ function Form(props) {
       setMessageIsValid(false);
       return;
     }
-
-    // setEnteredFirstNameIsValid(true);
-    // setEnteredLastNameIsValid(true);
-    // setEmailIsValid(true);
-    // setMessageIsValid(true);
+    setEnteredFirstNameIsValid(true);
+    setEnteredLastNameIsValid(true);
+    setEmailIsValid(true);
+    setMessageIsValid(true);
     setEnteredFirstName("");
     setEnteredLastName("");
     setEmail("");
@@ -268,18 +246,10 @@ function Form(props) {
         </div>
 
         <div className="form-group terms">
-          <input
-            type="checkbox"
-            id="terms"
-            name="terms"
-            // onChange={handleCheck}
-            // checked={check}
-          />
+          <input type="checkbox" id="terms" name="terms" value="conditions" />
           <label className="terms-label" for="terms">
             You agree to providing your data to Ayomidea1 who may contact you.
           </label>
-
-          {/* {!check && <p>Agree</p>} */}
         </div>
 
         <div className="form-group">
@@ -287,14 +257,11 @@ function Form(props) {
             type="submit"
             className="btn btn-primary btn-lg btn-block"
             id="btn__submit"
-            onClick={() => setSubmitForm(true)}
           >
             Send Message
           </button>
         </div>
       </form>
-
-      {formIsValid && submitForm && <p>You successfully submmitted the form</p>}
     </section>
   );
 }

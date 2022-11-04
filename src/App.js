@@ -1,9 +1,8 @@
 import "./App.css";
 import Profile from "./Profile";
 import Product from "./Product";
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Contact from "./Contact";
-import Home from "./Home";
 import Form from "./Form";
 const ListItems = [
   {
