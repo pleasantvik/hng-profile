@@ -32,10 +32,6 @@ function Form(props) {
   ) {
     formIsValid = true;
   }
-  //   const handleCheck = () => {
-  //     setCheck((prev) => !prev);
-  //     console.log(check);
-  //   };
 
   //NAME INPUT HANDLER
   const handleFirstNameInputChange = (e) => {
@@ -105,10 +101,6 @@ function Form(props) {
     setEmailIsTouched(true);
     setMessageIsTouched(true);
 
-    // if (!check) return;
-
-    //WITH useRef
-    // const enteredValue = nameInputRef.current.value;
     if (enteredFirstName.trim() === "") {
       setEnteredFirstNameIsValid(false);
       return;
@@ -125,11 +117,6 @@ function Form(props) {
       setMessageIsValid(false);
       return;
     }
-
-    // setEnteredFirstNameIsValid(true);
-    // setEnteredLastNameIsValid(true);
-    // setEmailIsValid(true);
-    // setMessageIsValid(true);
     setEnteredFirstName("");
     setEnteredLastName("");
     setEmail("");
